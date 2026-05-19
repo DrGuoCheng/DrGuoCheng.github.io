@@ -90,7 +90,7 @@
         is a growing campus of the Texas A&amp;M University System, home to the
         <em>"Island University"</em> &mdash; the only university in the United States located
         on its own island.</li>
-    <li>The <strong>Department of Computer Science</strong> is part of the College of
+    <li>The <strong><a href="https://www.tamucc.edu/engineering/departments/computer-science/">Department of Computer Science</a></strong> is part of the College of
         Engineering and Computer Science, with growing research strength in AI, computer
         vision, cybersecurity, and data science.</li>
     <li><strong>Texas is a hub for AI and autonomous driving research</strong> with major
@@ -114,7 +114,7 @@
   <h2 id="apply">How to apply</h2>
   <p>
     Please send me an email
-    <a href="mailto:cheng340@purdue.edu" class="email-icon" title="Email" aria-label="Email">
+    <a href="mailto:cheng340@purdue.edu" class="email-icon" title="cheng340@purdue.edu" aria-label="Email" id="email-link" data-email="cheng340@purdue.edu">
       <i class="fa-solid fa-envelope"></i>
     </a>
     with the subject line:
@@ -140,17 +140,36 @@
   <footer class="foot">
     &copy; <span id="year">2026</span> Guo Cheng &middot; Texas A&amp;M University&ndash;Corpus Christi
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-</body>
-</html>
-orpus Christi!</p>
-
-  <footer class="foot">
-    &copy; <span id="year">2026</span> Guo Cheng &middot; Texas A&amp;M University&ndash;Corpus Christi
-  </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    // Email icon: show address as toast + copy to clipboard on click.
+    (function () {
+      var link = document.getElementById('email-link');
+      if (!link) return;
+      link.addEventListener('click', function (e) {
+        var email = link.dataset.email || 'cheng340@purdue.edu';
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).catch(function(){});
+        }
+        var toast = document.createElement('div');
+        toast.textContent = email + '  (copied to clipboard)';
+        toast.setAttribute('role', 'status');
+        toast.style.cssText =
+          'position:fixed; bottom:32px; left:50%; transform:translateX(-50%);' +
+          'background:#222; color:#fff; padding:12px 20px; border-radius:8px;' +
+          'font-size:15px; font-family:Lato,Helvetica,Arial,sans-serif;' +
+          'box-shadow:0 6px 20px rgba(0,0,0,0.25); z-index:9999;' +
+          'opacity:0; transition:opacity 0.2s ease;';
+        document.body.appendChild(toast);
+        requestAnimationFrame(function(){ toast.style.opacity = '1'; });
+        setTimeout(function () {
+          toast.style.opacity = '0';
+          setTimeout(function(){ toast.remove(); }, 250);
+        }, 2500);
+      });
+    })();
+  </script>
 </main>
 
 </body>
