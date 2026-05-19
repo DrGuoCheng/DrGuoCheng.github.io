@@ -39,7 +39,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 nav.topnav {
   border-bottom: 1px solid var(--rule);
   padding: 14px 24px;
-  background: var(--bg);
+  background: #002F5F; /* TAMU-CC Islander Blue */
 }
 nav.topnav .inner {
   max-width: 880px;
@@ -52,11 +52,11 @@ nav.topnav .inner {
 nav.topnav .brand {
   font-weight: 700;
   font-size: 1.05rem;
-  color: var(--text);
+  color: #ffffff;
 }
 nav.topnav .links { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; }
-nav.topnav a { color: var(--text); }
-nav.topnav a:hover { color: var(--link-hover); }
+nav.topnav a { color: #ffffff; }
+nav.topnav a:hover { color: #82B5DD; text-decoration: none; } /* TAMU-CC Tarpon Sky */
 
 /* ------- Headings ------- */
 h1, h2, h3 { font-weight: 700; line-height: 1.25; }
