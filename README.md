@@ -1,7 +1,7 @@
 # Guo Cheng — Personal Website
 
-A static personal website inspired by
-<https://chong-l.github.io/hiring.html>, built with plain HTML + CSS so it can
+A static personal website at
+<https://drguocheng.github.io>, built with plain HTML + CSS so it can
 be hosted on **GitHub Pages** for free.
 
 ## Files in this folder
