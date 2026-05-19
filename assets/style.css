@@ -80,8 +80,9 @@ h3 { font-size: 1.1rem; margin: 1.2em 0 0.4em; }
   margin-bottom: 8px;
 }
 .profile .photo {
-  width: 240px;
-  flex: 0 0 240px;
+  width: 480px;
+  flex: 0 0 480px;
+  max-width: 100%;
 }
 .profile .photo img {
   width: 100%;
@@ -103,7 +104,7 @@ h3 { font-size: 1.1rem; margin: 1.2em 0 0.4em; }
 
 @media (max-width: 640px) {
   .profile { flex-direction: column; }
-  .profile .photo { width: 200px; flex-basis: 200px; }
+  .profile .photo { width: 100%; flex-basis: auto; max-width: 400px; }
 }
 
 /* ------- Lists & content ------- */
