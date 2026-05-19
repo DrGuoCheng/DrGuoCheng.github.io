@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Guo Cheng &mdash; Texas A&amp;M University&ndash;Corpus Christi</title>
-  <meta name="description" content="Guo Cheng &mdash; Assistant Professor of Computer Science at Texas A&M University-Corpus Christi. Computer Vision, Deep Learning, Artificial Intelligence, Autonomous Driving.">
+  <title>Dr. Guo Cheng &mdash; Texas A&amp;M University&ndash;Corpus Christi</title>
+  <meta name="description" content="Dr. Guo Cheng &mdash; Assistant Professor of Computer Science at Texas A&M University-Corpus Christi. Computer Vision, Deep Learning, Artificial Intelligence, Autonomous Driving.">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -12,7 +12,7 @@
 
 <nav class="topnav">
   <div class="inner">
-    <span class="brand">Guo Cheng</span>
+    <span class="brand">Dr. Guo Cheng</span>
     <div class="links">
       <a href="index.html">Home</a>
       <a href="publications.html">Publications</a>
@@ -27,9 +27,9 @@
 
   <section class="profile">
     <div class="photo">
-      <img src="assets/profile.jpg" alt="Guo Cheng">
+      <img src="assets/profile.jpg" alt="Dr. Guo Cheng">
       <div class="profile-icons">
-        <a href="mailto:cheng340@purdue.edu" title="Email" aria-label="Email">
+        <a href="mailto:cheng340@purdue.edu" title="cheng340@purdue.edu" aria-label="Email" id="email-link" data-email="cheng340@purdue.edu">
           <i class="fa-solid fa-envelope"></i>
         </a>
         <a href="https://scholar.google.com/citations?user=oC_HjTEAAAAJ&hl=en" title="Google Scholar" aria-label="Google Scholar">
@@ -47,7 +47,7 @@
       </div>
     </div>
     <div class="info">
-      <h1>Guo Cheng</h1>
+      <h1>Dr. Guo Cheng</h1>
       <p class="role">
         <strong>Assistant Professor</strong><br>
         <a href="https://www.tamucc.edu/engineering/departments/computer-science">Department of Computer Science</a><br>
@@ -69,7 +69,7 @@
 
   <h2>About me</h2>
   <p>
-    I am <strong>Guo Cheng</strong>, an incoming <strong>Assistant Professor of Computer
+    I am <strong>Dr. Guo Cheng</strong>, an incoming <strong>Assistant Professor of Computer
     Science</strong> at <a href="https://www.tamucc.edu/">Texas A&amp;M University&ndash;Corpus
     Christi (TAMU-CC)</a>, starting in August 2026. My research is in <strong>computer
     vision</strong>, <strong>deep learning</strong>, and <strong>autonomous driving</strong>,
@@ -170,11 +170,45 @@
      (2020&ndash;2021), IEEE T-IV (2019&ndash;2021), IEEE TVT (2019).</p>
 
   <footer class="foot">
-    &copy; <span id="year">2026</span> Guo Cheng &middot; Texas A&amp;M University&ndash;Corpus
+    &copy; <span id="year">2026</span> Dr. Guo Cheng &middot; Texas A&amp;M University&ndash;Corpus
     Christi &middot; Hosted on
     <a href="https://pages.github.com/">GitHub Pages</a>.
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Email icon: show the address as a toast and copy to clipboard on click,
+    // so the user gets visible feedback even if no default mail client is configured.
+    (function () {
+      var link = document.getElementById('email-link');
+      if (!link) return;
+      link.addEventListener('click', function (e) {
+        var email = link.dataset.email || 'cheng340@purdue.edu';
+        // Try to copy to clipboard; fail silently if not allowed.
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).catch(function(){});
+        }
+        // Show a small toast with the email address.
+        var toast = document.createElement('div');
+        toast.textContent = email + '  (copied to clipboard)';
+        toast.setAttribute('role', 'status');
+        toast.style.cssText =
+          'position:fixed; bottom:32px; left:50%; transform:translateX(-50%);' +
+          'background:#222; color:#fff; padding:12px 20px; border-radius:8px;' +
+          'font-size:15px; font-family:Lato,Helvetica,Arial,sans-serif;' +
+          'box-shadow:0 6px 20px rgba(0,0,0,0.25); z-index:9999;' +
+          'opacity:0; transition:opacity 0.2s ease;';
+        document.body.appendChild(toast);
+        requestAnimationFrame(function(){ toast.style.opacity = '1'; });
+        setTimeout(function () {
+          toast.style.opacity = '0';
+          setTimeout(function(){ toast.remove(); }, 250);
+        }, 2500);
+        // Let the mailto: handler still try to fire for users who have a mail
+        // client configured — no preventDefault().
+      });
+    })();
+  </script>
 </main>
 
 </body>
