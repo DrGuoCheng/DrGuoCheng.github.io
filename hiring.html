@@ -114,7 +114,7 @@
   <h2 id="apply">How to apply</h2>
   <p>
     Please send me an email
-    <a href="mailto:cheng340@purdue.edu" class="email-icon" title="cheng340@purdue.edu" aria-label="Email" id="email-link" data-email="cheng340@purdue.edu">
+    <a href="mailto:guo.cheng@tamucc.edu" class="email-icon" title="guo.cheng@tamucc.edu" aria-label="Email" id="email-link" data-email="guo.cheng@tamucc.edu">
       <i class="fa-solid fa-envelope"></i>
     </a>
     with the subject line:
@@ -148,7 +148,7 @@
       var link = document.getElementById('email-link');
       if (!link) return;
       link.addEventListener('click', function (e) {
-        var email = link.dataset.email || 'cheng340@purdue.edu';
+        var email = link.dataset.email || 'guo.cheng@tamucc.edu';
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(email).catch(function(){});
         }
