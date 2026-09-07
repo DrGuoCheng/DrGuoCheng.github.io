@@ -16,8 +16,8 @@ h1,h2,h3{color:#2a2a2a;line-height:1.22}h2{margin:48px 0 20px;padding-bottom:8px
 @media(max-width:600px){.home-shell,.home-wide{font-size:17px}.home-shell .intro{font-size:1em}}
 
 /* Larger navigation and Home-page typography */
-.nav a{font-size:1.22rem;font-weight:700}.home-shell,.home-wide{font-size:20px}.home-shell .intro{font-size:1.1em}.home-wide .news-row,.home-wide .sponsor-grid,.home-wide>section:last-of-type>p{font-size:1.05em}.home-wide .news-date{font-weight:600}
-@media(max-width:600px){.nav a{font-size:1rem}.home-shell,.home-wide{font-size:18px}.home-shell .intro{font-size:1em}.home-wide .news-row,.home-wide .sponsor-grid,.home-wide>section:last-of-type>p{font-size:1em}}
+.nav a{font-size:1.22rem;font-weight:700}.home-shell,.home-wide{font-size:19px}.home-shell .intro{font-size:1.06em}.home-wide .news-row,.home-wide .sponsor-grid,.home-wide>section:last-of-type>p{font-size:1.02em}.home-wide .news-date{font-weight:600}
+@media(max-width:600px){.nav a{font-size:1rem}.home-shell,.home-wide{font-size:17px}.home-shell .intro{font-size:1em}.home-wide .news-row,.home-wide .sponsor-grid,.home-wide>section:last-of-type>p{font-size:1em}}
 
 /* Lab section navigation and year-grouped talks */
 .lab-subnav a{font-size:1.12rem;font-weight:800}.talks-page{font-size:19px}.talks-page>h1{font-size:3rem}.talk-year h2{margin:38px 0 12px;padding:0;border:0;color:var(--navy);font-family:"Segoe UI",Arial,sans-serif;font-size:1.75rem}.talk-list{margin:0;padding-left:32px}.talk-list li{margin:0 0 18px;line-height:1.6}
