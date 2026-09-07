@@ -12,4 +12,5 @@ h1,h2,h3{color:#2a2a2a;line-height:1.22}h2{margin:48px 0 20px;padding-bottom:8px
 
 /* Home-page readability */
 .home-shell,.home-wide{font-size:19px}.home-shell .intro{font-size:1.08em;line-height:1.62}.home-wide h2{font-size:1.8rem}.home-wide .news-row{line-height:1.62}
+@media(min-width:951px) and (max-width:1250px){.profile-row{grid-template-columns:280px minmax(0,1fr);column-gap:40px}.research-box-layout{grid-template-columns:minmax(0,1fr)}.research-list{columns:1}.research-map{width:100%;max-width:390px;min-width:0;margin:12px auto 0}}
 @media(max-width:600px){.home-shell,.home-wide{font-size:17px}.home-shell .intro{font-size:1em}}
